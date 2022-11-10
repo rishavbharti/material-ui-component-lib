@@ -1,5 +1,5 @@
 {
-  "name": "nexus-ui",
+  "name": "@rishavbharti/nexus-ui",
   "version": "0.0.0",
   "description": "UI Library",
   "main": "src/index.js",
@@ -55,5 +55,13 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rishavbharti/nexus-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rishavbharti/nexus-ui/issues"
+  },
+  "homepage": "https://github.com/rishavbharti/nexus-ui#readme"
 }
