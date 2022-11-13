@@ -10,7 +10,13 @@ const packageJson = require('./package.json');
 export default [
   {
     input: 'src/index.js',
-    external: ['react', '@emotion/react', '@emotion/styled', '@mui/material'],
+    external: [
+      'react',
+      '@emotion/react',
+      '@emotion/styled',
+      '@mui/material',
+      '@fontsource/noto-sans',
+    ],
     output: [
       {
         file: packageJson.module,

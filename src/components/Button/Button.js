@@ -5,4 +5,9 @@ const NexusButton = (props) => {
   return <Button {...props}>{props.children}</Button>;
 };
 
+NexusButton.defaultProps = {
+  variant: 'contained',
+  color: 'primary',
+};
+
 export default NexusButton;

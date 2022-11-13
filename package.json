@@ -11,7 +11,11 @@
     "start": "react-scripts start",
     "format": "prettier --write \"src/**/*\"",
     "lint:format": "prettier --check \"src/**/*\"",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "prepare": "husky install"
+  },
+  "_moduleAliases": {
+    "@styles": "dist/styles"
   },
   "author": "Rishav Bharti <https://www.linkedin.com/in/rishavbharti>",
   "license": "ISC",
@@ -22,11 +26,13 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
+    "@fontsource/noto-sans": "^4.5.11",
     "@mui/material": "^5.10.12"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
     "@babel/eslint-parser": "^7.5.4",
+    "@babel/plugin-transform-react-jsx": "^7.19.0",
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@rollup/plugin-babel": "^6.0.2",
@@ -38,7 +44,10 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
+    "prop-types": "^15.8.1",
     "react-scripts": "^5.0.1",
     "rollup": "^2.79.1",
     "rollup-plugin-filesize": "^9.1.2",
@@ -64,5 +73,8 @@
   "bugs": {
     "url": "https://github.com/rishavbharti/nexus-ui/issues"
   },
-  "homepage": "https://github.com/rishavbharti/nexus-ui#readme"
+  "homepage": "https://github.com/rishavbharti/nexus-ui#readme",
+  "lint-staged": {
+    "*.js": "eslint --cache --fix"
+  }
 }
