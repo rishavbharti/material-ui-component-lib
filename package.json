@@ -1,6 +1,6 @@
 {
   "name": "@rishavbharti/nexus-ui",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "UI Library",
   "main": "src/index.js",
   "module": "dist/esm/index.js",
@@ -13,9 +13,6 @@
     "lint:format": "prettier --check \"src/**/*\"",
     "build": "rollup -c",
     "prepare": "husky install"
-  },
-  "_moduleAliases": {
-    "@styles": "dist/styles"
   },
   "author": "Rishav Bharti <https://www.linkedin.com/in/rishavbharti>",
   "license": "ISC",
