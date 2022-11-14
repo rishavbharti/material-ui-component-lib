@@ -1,3 +1,5 @@
+import white from './white';
+
 const shades = {
   10: '#CCEFE7',
   20: '#AAE5D7',
@@ -13,6 +15,7 @@ const green = {
   main: shades[60],
   light: shades[20],
   dark: shades[50],
+  contrastText: white[0],
 };
 
 export default green;
