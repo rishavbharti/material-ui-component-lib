@@ -51,12 +51,19 @@ export const MuiButtonOverrides = {
         },
       }),
 
-      ...(ownerState.loading === 'true' && {
-        '&:hover, &:focus, &:active, &:disabled': {
-          backgroundColor: theme.palette[ownerState.color].main,
-          border: 'none',
-        },
-      }),
+      ...(ownerState.loading === 'true' &&
+        ownerState.variant === 'contained' && {
+          '&:hover, &:focus, &:active, &:disabled': {
+            backgroundColor: theme.palette[ownerState.color].main,
+            border: 'none',
+          },
+        }),
+      ...(ownerState.loading === 'true' &&
+        ownerState.variant === 'outlined' && {
+          '&:hover, &:focus, &:active, &:disabled': {
+            backgroundColor: 'transparent',
+          },
+        }),
     }),
     textPrimary: ({ theme, ownerState }) => ({
       '&:hover': {
