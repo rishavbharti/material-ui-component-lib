@@ -1,4 +1,4 @@
-import { baseTypography, fontSizes, fontWeights } from 'styles/typography';
+import { baseTypography, fontSizes, fontWeights } from '../../styles/typography';
 
 export const MuiButtonOverrides = {
   styleOverrides: {
