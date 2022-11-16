@@ -56,6 +56,7 @@ export const baseTypography = {
   fontFamily: fontFamilies.sansSerif,
   fontSize: 14,
   htmlFontSize: 14,
+  // pxToRem: (size) => `${size / 14}rem`,
   fontWeightRegular: fontWeights.regular,
   fontWeightMedium: fontWeights.medium,
   fontWeightSemibold: fontWeights.semibold,

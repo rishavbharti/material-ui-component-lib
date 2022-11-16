@@ -1,3 +1,5 @@
+import white from './white';
+
 const shades = {
   10: '#EFF4FB',
   20: '#C6D7F1',
@@ -17,8 +19,10 @@ const shades = {
 const secondaryBlue = {
   ...shades,
   main: shades[80],
-  light: shades[20],
-  dark: shades[70],
+  light: shades[70],
+  lighter: shades[20],
+  dark: shades[90],
+  contrastText: white[0],
 };
 
 export default secondaryBlue;

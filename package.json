@@ -1,6 +1,6 @@
 {
   "name": "@rishavbharti/nexus-ui",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "UI Library",
   "main": "src/index.js",
   "module": "dist/esm/index.js",
@@ -70,7 +70,6 @@
   "bugs": {
     "url": "https://github.com/rishavbharti/nexus-ui/issues"
   },
-  "homepage": "https://github.com/rishavbharti/nexus-ui#readme",
   "lint-staged": {
     "*.js": "eslint --cache --fix"
   }

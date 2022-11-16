@@ -17,8 +17,10 @@ const shades = {
 const primaryBlue = {
   ...shades,
   main: shades[60],
-  light: shades[20],
+  light: shades[50],
+  lighter: shades[20],
   dark: shades[70],
+  darker: shades[80],
   contrastText: white[0],
 };
 

@@ -1,3 +1,5 @@
+import white from './white';
+
 const shades = {
   10: '#F9DFCC',
   20: '#F6CAAA',
@@ -14,8 +16,10 @@ const shades = {
 const orange = {
   ...shades,
   main: shades[60],
-  light: shades[20],
-  dark: shades[50],
+  light: shades[50],
+  lighter: shades[20],
+  dark: shades[70],
+  contrastText: white[0],
 };
 
 export default orange;
