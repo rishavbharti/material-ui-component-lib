@@ -1,7 +1,8 @@
 import React from 'react';
-import Button from '@mui/material/Button';
+import PropTypes from 'prop-types';
+import { Button as MuiButton } from '@mui/material';
 import Badge from '@mui/material/Badge';
-import { CircularProgress } from '@mui/material';
+import CircularProgress from '@mui/material/CircularProgress';
 
 import styled from '../../styles/styled';
 
@@ -18,7 +19,7 @@ const loadingIconSize = {
   large: 15,
 };
 
-const NexusButton = (props) => {
+const Button = (props) => {
   const {
     showBadge,
     badgeContent,
@@ -27,6 +28,7 @@ const NexusButton = (props) => {
     badgeOverlap,
     loading,
     disabled,
+    label,
     ...rest
   } = props;
 
@@ -35,7 +37,7 @@ const NexusButton = (props) => {
 
   const renderButton = () => {
     return (
-      <Button {...rest} loading={isLoading} disabled={isDisabled}>
+      <MuiButton {...rest} loading={isLoading} disabled={isDisabled}>
         {loading ? (
           <LoadingIcon
             size={loadingIconSize[props.size]}
@@ -43,9 +45,9 @@ const NexusButton = (props) => {
             color={props.color}
           />
         ) : (
-          props.children
+          label || props.children
         )}
-      </Button>
+      </MuiButton>
     );
   };
 
@@ -65,7 +67,23 @@ const NexusButton = (props) => {
   return renderButton();
 };
 
-NexusButton.defaultProps = {
+Button.propTypes = {
+  children: PropTypes.node,
+  label: PropTypes.string,
+  variant: PropTypes.oneOf(['contained', 'outlined', 'text']),
+  color: PropTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'error']),
+  size: PropTypes.oneOf(['small', 'medium', 'large']),
+  fullWidth: PropTypes.bool,
+  href: PropTypes.string,
+  loading: PropTypes.bool,
+  disabled: PropTypes.bool,
+
+  showBadge: PropTypes.bool,
+  badgeContent: PropTypes.node,
+  badgeColor: PropTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'error']),
+};
+
+Button.defaultProps = {
   variant: 'contained',
   color: 'primary',
   size: 'medium',
@@ -76,4 +94,4 @@ NexusButton.defaultProps = {
   badgeOverlap: 'rectangular',
 };
 
-export default NexusButton;
+export default Button;

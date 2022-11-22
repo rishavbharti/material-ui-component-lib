@@ -1,10 +1,10 @@
 import React from 'react';
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider as MuiThemeProvider } from '@mui/material';
 
 import theme from '../../styles/theme';
 
-const NexusThemeProvider = ({ children }) => {
-  return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+const ThemeProvider = ({ children }) => {
+  return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
 };
 
-export default NexusThemeProvider;
+export default ThemeProvider;

@@ -1,2 +1,2 @@
-export { Button } from './Button';
-export { ThemeProvider } from './ThemeProvider';
+export { default as Button } from './Button';
+export { default as ThemeProvider } from './ThemeProvider';
