@@ -14,7 +14,8 @@
     "build": "rollup -c",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "chromatic": "npx chromatic --project-token=bced659d8a78"
   },
   "author": "Rishav Bharti <https://www.linkedin.com/in/rishavbharti>",
   "license": "ISC",
@@ -49,6 +50,7 @@
     "@storybook/theming": "^6.5.13",
     "@types/babel__core": "^7.1.20",
     "babel-loader": "^8.3.0",
+    "chromatic": "^6.11.4",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -86,5 +88,6 @@
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix"
-  }
+  },
+  "_id": "@rishavbharti/nexus-ui@0.0.3"
 }
