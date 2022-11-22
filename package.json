@@ -12,7 +12,9 @@
     "format": "prettier --write \"src/**/*\"",
     "lint:format": "prettier --check \"src/**/*\"",
     "build": "rollup -c",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "author": "Rishav Bharti <https://www.linkedin.com/in/rishavbharti>",
   "license": "ISC",
@@ -24,7 +26,8 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/noto-sans": "^4.5.11",
-    "@mui/material": "^5.10.12"
+    "@mui/material": "^5.10.12",
+    "react": ">=16.11.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.2",
@@ -35,7 +38,17 @@
     "@rollup/plugin-babel": "^6.0.2",
     "@rollup/plugin-commonjs": "^23.0.2",
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "@storybook/addon-actions": "^6.5.13",
+    "@storybook/addon-essentials": "^6.5.13",
+    "@storybook/addon-interactions": "^6.5.13",
+    "@storybook/addon-links": "^6.5.13",
+    "@storybook/builder-webpack5": "^6.5.13",
+    "@storybook/manager-webpack5": "^6.5.13",
+    "@storybook/react": "^6.5.13",
+    "@storybook/testing-library": "^0.0.13",
+    "@storybook/theming": "^6.5.13",
     "@types/babel__core": "^7.1.20",
+    "babel-loader": "^8.3.0",
     "eslint": "^8.27.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
@@ -45,6 +58,7 @@
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1",
     "prop-types": "^15.8.1",
+    "react-dom": "^18.2.0",
     "react-scripts": "^5.0.1",
     "rollup": "^2.79.1",
     "rollup-plugin-filesize": "^9.1.2",
