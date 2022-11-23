@@ -22,6 +22,8 @@ const baseMuiPalette = {
   },
 };
 
+export const COLOR_TYPES = ['primary', 'secondary', 'success', 'warning', 'error'];
+
 export const basePalette = {
   primaryBlue,
   secondaryBlue,
