@@ -81,6 +81,7 @@ Button.propTypes = {
   showBadge: PropTypes.bool,
   badgeContent: PropTypes.node,
   badgeColor: PropTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'error']),
+  badgeVariant: PropTypes.oneOf(['dot', 'standard', 'string']),
 };
 
 Button.defaultProps = {
@@ -89,7 +90,6 @@ Button.defaultProps = {
   size: 'medium',
   disableElevation: true,
   disableRipple: true,
-  badgeVariant: 'dot',
   badgeColor: 'error',
   badgeOverlap: 'rectangular',
 };

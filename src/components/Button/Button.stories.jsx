@@ -43,3 +43,10 @@ Small.args = {
   size: 'small',
   label: 'Button',
 };
+
+export const WithBadge = Template.bind({});
+WithBadge.args = {
+  label: 'Button',
+  showBadge: true,
+  badgeContent: 4,
+};
