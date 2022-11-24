@@ -48,8 +48,8 @@ const Button = (props) => {
   const isDisabled = disabled || loading;
 
   const _icon = icon && <Icon name={icon} sx={{ fontSize: iconSize[props.size] }} />;
-  const _startIcon = startIcon && <Icon name={startIcon} color={startIconColor} />;
-  const _endIcon = endIcon && <Icon name={endIcon} color={endIconColor} />;
+  const _startIcon = startIcon && !loading && <Icon name={startIcon} color={startIconColor} />;
+  const _endIcon = endIcon && !loading && <Icon name={endIcon} color={endIconColor} />;
 
   const renderButton = () => {
     return (
