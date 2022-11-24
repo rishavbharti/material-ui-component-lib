@@ -1,15 +1,19 @@
 import React from 'react';
 import Button from './Button';
+import { ICON_NAMES } from '../Icon';
+import { COLOR_TYPES } from '../../styles/palette';
 
 export default {
   title: 'Components/Button',
   component: Button,
   argTypes: {
-    children: {
-      control: {
-        type: 'React.ReactNode',
-      },
-    },
+    color: { control: 'select', options: COLOR_TYPES },
+    icon: { control: 'select', options: ICON_NAMES },
+    startIcon: { control: 'select', options: ICON_NAMES },
+    startIconColor: { control: 'select', options: COLOR_TYPES },
+    endIcon: { control: 'select', options: ICON_NAMES },
+    endIconColor: { control: 'select', options: COLOR_TYPES },
+    badgeColor: { control: 'select', options: COLOR_TYPES },
   },
 };
 
@@ -49,4 +53,21 @@ WithBadge.args = {
   label: 'Button',
   showBadge: true,
   badgeContent: 4,
+};
+
+export const WithIcon = Template.bind({});
+WithIcon.args = {
+  icon: 'tick_mark',
+};
+
+export const StartIcon = Template.bind({});
+StartIcon.args = {
+  label: 'Button',
+  startIcon: 'tick_mark',
+};
+
+export const EndIcon = Template.bind({});
+EndIcon.args = {
+  label: 'Button',
+  endIcon: 'tick_mark',
 };

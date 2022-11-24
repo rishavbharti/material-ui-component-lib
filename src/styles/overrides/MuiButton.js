@@ -131,8 +131,8 @@ export const MuiButtonOverrides = {
 
       ...(ownerState.icon && {
         padding: theme.typography.pxToRem(12),
-        maxWidth: theme.typography.pxToRem(48),
-        maxHeight: theme.typography.pxToRem(48),
+        minWidth: theme.typography.pxToRem(48),
+        minHeight: theme.typography.pxToRem(48),
       }),
     }),
     sizeMedium: ({ theme, ownerState }) => ({
@@ -143,9 +143,9 @@ export const MuiButtonOverrides = {
       minHeight: theme.typography.pxToRem(40),
 
       ...(ownerState.icon && {
-        padding: theme.typography.pxToRem(12),
-        maxWidth: theme.typography.pxToRem(40),
-        maxHeight: theme.typography.pxToRem(40),
+        padding: theme.typography.pxToRem(10),
+        minWidth: theme.typography.pxToRem(40),
+        minHeight: theme.typography.pxToRem(40),
       }),
     }),
     sizeSmall: ({ theme, ownerState }) => ({
@@ -158,8 +158,8 @@ export const MuiButtonOverrides = {
 
       ...(ownerState.icon && {
         padding: theme.typography.pxToRem(8),
-        maxWidth: theme.typography.pxToRem(32),
-        maxHeight: theme.typography.pxToRem(32),
+        minWidth: theme.typography.pxToRem(32),
+        minHeight: theme.typography.pxToRem(32),
       }),
     }),
   },

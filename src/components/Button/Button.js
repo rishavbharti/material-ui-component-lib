@@ -4,6 +4,7 @@ import { Button as MuiButton } from '@mui/material';
 import Badge from '@mui/material/Badge';
 import CircularProgress from '@mui/material/CircularProgress';
 
+import Icon from '../../components/Icon';
 import styled from '../../styles/styled';
 
 const LoadingIcon = styled(CircularProgress)(({ theme, buttonvariant, color }) => ({
@@ -19,6 +20,12 @@ const loadingIconSize = {
   large: 15,
 };
 
+const iconSize = {
+  small: 16,
+  medium: 20,
+  large: 24,
+};
+
 const Button = (props) => {
   const {
     showBadge,
@@ -29,15 +36,31 @@ const Button = (props) => {
     loading,
     disabled,
     label,
+    icon,
+    startIcon,
+    startIconColor,
+    endIcon,
+    endIconColor,
     ...rest
   } = props;
 
   const isLoading = loading?.toString();
   const isDisabled = disabled || loading;
 
+  const _icon = icon && <Icon name={icon} sx={{ fontSize: iconSize[props.size] }} />;
+  const _startIcon = startIcon && <Icon name={startIcon} color={startIconColor} />;
+  const _endIcon = endIcon && <Icon name={endIcon} color={endIconColor} />;
+
   const renderButton = () => {
     return (
-      <MuiButton {...rest} loading={isLoading} disabled={isDisabled}>
+      <MuiButton
+        {...rest}
+        loading={isLoading}
+        disabled={isDisabled}
+        startIcon={_startIcon}
+        endIcon={_endIcon}
+        icon={icon}
+      >
         {loading ? (
           <LoadingIcon
             size={loadingIconSize[props.size]}
@@ -45,7 +68,7 @@ const Button = (props) => {
             color={props.color}
           />
         ) : (
-          label || props.children
+          _icon || label || props.children
         )}
       </MuiButton>
     );
@@ -68,19 +91,24 @@ const Button = (props) => {
 };
 
 Button.propTypes = {
-  children: PropTypes.node,
   label: PropTypes.string,
   variant: PropTypes.oneOf(['contained', 'outlined', 'text']),
-  color: PropTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'error']),
+  color: PropTypes.string,
   size: PropTypes.oneOf(['small', 'medium', 'large']),
   fullWidth: PropTypes.bool,
   href: PropTypes.string,
   loading: PropTypes.bool,
   disabled: PropTypes.bool,
 
+  icon: PropTypes.string,
+  startIcon: PropTypes.string,
+  startIconColor: PropTypes.string,
+  endIcon: PropTypes.string,
+  endIconColor: PropTypes.string,
+
   showBadge: PropTypes.bool,
   badgeContent: PropTypes.node,
-  badgeColor: PropTypes.oneOf(['primary', 'secondary', 'success', 'warning', 'error']),
+  badgeColor: PropTypes.string,
   badgeVariant: PropTypes.oneOf(['dot', 'standard', 'string']),
 };
 
